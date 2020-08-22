@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7AFACF0124F14BF400FC7207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF0024F14BF400FC7207 /* AppDelegate.swift */; };
+		7AFACF0324F14BF400FC7207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF0224F14BF400FC7207 /* SceneDelegate.swift */; };
+		7AFACF0524F14BF400FC7207 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF0424F14BF400FC7207 /* ViewController.swift */; };
+		7AFACF0824F14BF400FC7207 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AFACF0624F14BF400FC7207 /* Main.storyboard */; };
+		7AFACF0B24F14BF400FC7207 /* Maskit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF0924F14BF400FC7207 /* Maskit.xcdatamodeld */; };
+		7AFACF0D24F14BFD00FC7207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AFACF0C24F14BFD00FC7207 /* Assets.xcassets */; };
+		7AFACF1024F14BFD00FC7207 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AFACF0E24F14BFD00FC7207 /* LaunchScreen.storyboard */; };
+		7AFACF1B24F14BFD00FC7207 /* MaskitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF1A24F14BFD00FC7207 /* MaskitTests.swift */; };
+		7AFACF2624F14BFD00FC7207 /* MaskitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF2524F14BFD00FC7207 /* MaskitUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7AFACF1724F14BFD00FC7207 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AFACEF524F14BF400FC7207 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AFACEFC24F14BF400FC7207;
+			remoteInfo = Maskit;
+		};
+		7AFACF2224F14BFD00FC7207 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AFACEF524F14BF400FC7207 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AFACEFC24F14BF400FC7207;
+			remoteInfo = Maskit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7AFACEFD24F14BF400FC7207 /* Maskit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maskit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AFACF0024F14BF400FC7207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7AFACF0224F14BF400FC7207 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7AFACF0424F14BF400FC7207 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7AFACF0724F14BF400FC7207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7AFACF0A24F14BF400FC7207 /* Maskit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Maskit.xcdatamodel; sourceTree = "<group>"; };
+		7AFACF0C24F14BFD00FC7207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7AFACF0F24F14BFD00FC7207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7AFACF1124F14BFD00FC7207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AFACF1624F14BFD00FC7207 /* MaskitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaskitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AFACF1A24F14BFD00FC7207 /* MaskitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskitTests.swift; sourceTree = "<group>"; };
+		7AFACF1C24F14BFD00FC7207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AFACF2124F14BFD00FC7207 /* MaskitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaskitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AFACF2524F14BFD00FC7207 /* MaskitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskitUITests.swift; sourceTree = "<group>"; };
+		7AFACF2724F14BFD00FC7207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7AFACEFA24F14BF400FC7207 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AFACF1324F14BFD00FC7207 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AFACF1E24F14BFD00FC7207 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7AFACEF424F14BF400FC7207 = {
+			isa = PBXGroup;
+			children = (
+				7AFACEFF24F14BF400FC7207 /* Maskit */,
+				7AFACF1924F14BFD00FC7207 /* MaskitTests */,
+				7AFACF2424F14BFD00FC7207 /* MaskitUITests */,
+				7AFACEFE24F14BF400FC7207 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7AFACEFE24F14BF400FC7207 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7AFACEFD24F14BF400FC7207 /* Maskit.app */,
+				7AFACF1624F14BFD00FC7207 /* MaskitTests.xctest */,
+				7AFACF2124F14BFD00FC7207 /* MaskitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7AFACEFF24F14BF400FC7207 /* Maskit */ = {
+			isa = PBXGroup;
+			children = (
+				7AFACF0024F14BF400FC7207 /* AppDelegate.swift */,
+				7AFACF0224F14BF400FC7207 /* SceneDelegate.swift */,
+				7AFACF0424F14BF400FC7207 /* ViewController.swift */,
+				7AFACF0624F14BF400FC7207 /* Main.storyboard */,
+				7AFACF0C24F14BFD00FC7207 /* Assets.xcassets */,
+				7AFACF0E24F14BFD00FC7207 /* LaunchScreen.storyboard */,
+				7AFACF1124F14BFD00FC7207 /* Info.plist */,
+				7AFACF0924F14BF400FC7207 /* Maskit.xcdatamodeld */,
+			);
+			path = Maskit;
+			sourceTree = "<group>";
+		};
+		7AFACF1924F14BFD00FC7207 /* MaskitTests */ = {
+			isa = PBXGroup;
+			children = (
+				7AFACF1A24F14BFD00FC7207 /* MaskitTests.swift */,
+				7AFACF1C24F14BFD00FC7207 /* Info.plist */,
+			);
+			path = MaskitTests;
+			sourceTree = "<group>";
+		};
+		7AFACF2424F14BFD00FC7207 /* MaskitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7AFACF2524F14BFD00FC7207 /* MaskitUITests.swift */,
+				7AFACF2724F14BFD00FC7207 /* Info.plist */,
+			);
+			path = MaskitUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7AFACEFC24F14BF400FC7207 /* Maskit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AFACF2A24F14BFD00FC7207 /* Build configuration list for PBXNativeTarget "Maskit" */;
+			buildPhases = (
+				7AFACEF924F14BF400FC7207 /* Sources */,
+				7AFACEFA24F14BF400FC7207 /* Frameworks */,
+				7AFACEFB24F14BF400FC7207 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Maskit;
+			productName = Maskit;
+			productReference = 7AFACEFD24F14BF400FC7207 /* Maskit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7AFACF1524F14BFD00FC7207 /* MaskitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AFACF2D24F14BFD00FC7207 /* Build configuration list for PBXNativeTarget "MaskitTests" */;
+			buildPhases = (
+				7AFACF1224F14BFD00FC7207 /* Sources */,
+				7AFACF1324F14BFD00FC7207 /* Frameworks */,
+				7AFACF1424F14BFD00FC7207 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AFACF1824F14BFD00FC7207 /* PBXTargetDependency */,
+			);
+			name = MaskitTests;
+			productName = MaskitTests;
+			productReference = 7AFACF1624F14BFD00FC7207 /* MaskitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7AFACF2024F14BFD00FC7207 /* MaskitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AFACF3024F14BFD00FC7207 /* Build configuration list for PBXNativeTarget "MaskitUITests" */;
+			buildPhases = (
+				7AFACF1D24F14BFD00FC7207 /* Sources */,
+				7AFACF1E24F14BFD00FC7207 /* Frameworks */,
+				7AFACF1F24F14BFD00FC7207 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AFACF2324F14BFD00FC7207 /* PBXTargetDependency */,
+			);
+			name = MaskitUITests;
+			productName = MaskitUITests;
+			productReference = 7AFACF2124F14BFD00FC7207 /* MaskitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7AFACEF524F14BF400FC7207 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Adrien Zier";
+				TargetAttributes = {
+					7AFACEFC24F14BF400FC7207 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					7AFACF1524F14BFD00FC7207 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 7AFACEFC24F14BF400FC7207;
+					};
+					7AFACF2024F14BFD00FC7207 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 7AFACEFC24F14BF400FC7207;
+					};
+				};
+			};
+			buildConfigurationList = 7AFACEF824F14BF400FC7207 /* Build configuration list for PBXProject "Maskit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7AFACEF424F14BF400FC7207;
+			productRefGroup = 7AFACEFE24F14BF400FC7207 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7AFACEFC24F14BF400FC7207 /* Maskit */,
+				7AFACF1524F14BFD00FC7207 /* MaskitTests */,
+				7AFACF2024F14BFD00FC7207 /* MaskitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7AFACEFB24F14BF400FC7207 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AFACF1024F14BFD00FC7207 /* LaunchScreen.storyboard in Resources */,
+				7AFACF0D24F14BFD00FC7207 /* Assets.xcassets in Resources */,
+				7AFACF0824F14BF400FC7207 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AFACF1424F14BFD00FC7207 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AFACF1F24F14BFD00FC7207 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7AFACEF924F14BF400FC7207 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AFACF0B24F14BF400FC7207 /* Maskit.xcdatamodeld in Sources */,
+				7AFACF0524F14BF400FC7207 /* ViewController.swift in Sources */,
+				7AFACF0124F14BF400FC7207 /* AppDelegate.swift in Sources */,
+				7AFACF0324F14BF400FC7207 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AFACF1224F14BFD00FC7207 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AFACF1B24F14BFD00FC7207 /* MaskitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AFACF1D24F14BFD00FC7207 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AFACF2624F14BFD00FC7207 /* MaskitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7AFACF1824F14BFD00FC7207 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7AFACEFC24F14BF400FC7207 /* Maskit */;
+			targetProxy = 7AFACF1724F14BFD00FC7207 /* PBXContainerItemProxy */;
+		};
+		7AFACF2324F14BFD00FC7207 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7AFACEFC24F14BF400FC7207 /* Maskit */;
+			targetProxy = 7AFACF2224F14BFD00FC7207 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7AFACF0624F14BF400FC7207 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7AFACF0724F14BF400FC7207 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7AFACF0E24F14BFD00FC7207 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7AFACF0F24F14BFD00FC7207 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7AFACF2824F14BFD00FC7207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7AFACF2924F14BFD00FC7207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7AFACF2B24F14BFD00FC7207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Maskit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ethical-inc.Maskit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7AFACF2C24F14BFD00FC7207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Maskit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ethical-inc.Maskit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7AFACF2E24F14BFD00FC7207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MaskitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ethical-inc.MaskitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maskit.app/Maskit";
+			};
+			name = Debug;
+		};
+		7AFACF2F24F14BFD00FC7207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MaskitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ethical-inc.MaskitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maskit.app/Maskit";
+			};
+			name = Release;
+		};
+		7AFACF3124F14BFD00FC7207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MaskitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ethical-inc.MaskitUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Maskit;
+			};
+			name = Debug;
+		};
+		7AFACF3224F14BFD00FC7207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MaskitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ethical-inc.MaskitUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Maskit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7AFACEF824F14BF400FC7207 /* Build configuration list for PBXProject "Maskit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AFACF2824F14BFD00FC7207 /* Debug */,
+				7AFACF2924F14BFD00FC7207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AFACF2A24F14BFD00FC7207 /* Build configuration list for PBXNativeTarget "Maskit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AFACF2B24F14BFD00FC7207 /* Debug */,
+				7AFACF2C24F14BFD00FC7207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AFACF2D24F14BFD00FC7207 /* Build configuration list for PBXNativeTarget "MaskitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AFACF2E24F14BFD00FC7207 /* Debug */,
+				7AFACF2F24F14BFD00FC7207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AFACF3024F14BFD00FC7207 /* Build configuration list for PBXNativeTarget "MaskitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AFACF3124F14BFD00FC7207 /* Debug */,
+				7AFACF3224F14BFD00FC7207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7AFACF0924F14BF400FC7207 /* Maskit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7AFACF0A24F14BF400FC7207 /* Maskit.xcdatamodel */,
+			);
+			currentVersion = 7AFACF0A24F14BF400FC7207 /* Maskit.xcdatamodel */;
+			path = Maskit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7AFACEF524F14BF400FC7207 /* Project object */;
+}
