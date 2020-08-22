@@ -26,16 +26,48 @@ class HomeViewController: UIViewController {
             
     }()
     
+    fileprivate let testview: UIView = {
+        
+        var view = UIView()
+        
+        view.backgroundColor = .red
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
+    
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initialise()
         generateUI()
         
+    }
+    
+    func initialise() {
+            
+        margins = view.layoutMarginsGuide
+            
+        VIEW_HEIGHT = view.frame.height
+            
+        view.addSubview(headerTitle)
+            
     }
 
     func generateUI() {
         
         view.backgroundColor = UIColor(named: UITools().backgroundColorString)
+        
+        let constraints = [
+            
+            headerTitle.topAnchor.constraint(equalTo: margins.topAnchor, constant: UITools().PADDING * 3/2),
+            headerTitle.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: UITools().PADDING),
+            headerTitle.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
+                    
+        ]
+        
+        NSLayoutConstraint.activate(constraints)
         
     }
 
