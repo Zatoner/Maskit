@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A82F12424F1710200626B3D /* UITools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82F12324F1710200626B3D /* UITools.swift */; };
 		7AFACF0124F14BF400FC7207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF0024F14BF400FC7207 /* AppDelegate.swift */; };
 		7AFACF0324F14BF400FC7207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF0224F14BF400FC7207 /* SceneDelegate.swift */; };
-		7AFACF0524F14BF400FC7207 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF0424F14BF400FC7207 /* ViewController.swift */; };
-		7AFACF0824F14BF400FC7207 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AFACF0624F14BF400FC7207 /* Main.storyboard */; };
+		7AFACF0524F14BF400FC7207 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF0424F14BF400FC7207 /* HomeViewController.swift */; };
 		7AFACF0B24F14BF400FC7207 /* Maskit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF0924F14BF400FC7207 /* Maskit.xcdatamodeld */; };
 		7AFACF0D24F14BFD00FC7207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AFACF0C24F14BFD00FC7207 /* Assets.xcassets */; };
 		7AFACF1024F14BFD00FC7207 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AFACF0E24F14BFD00FC7207 /* LaunchScreen.storyboard */; };
@@ -36,11 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A82F12324F1710200626B3D /* UITools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITools.swift; sourceTree = "<group>"; };
 		7AFACEFD24F14BF400FC7207 /* Maskit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maskit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AFACF0024F14BF400FC7207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AFACF0224F14BF400FC7207 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7AFACF0424F14BF400FC7207 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7AFACF0724F14BF400FC7207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7AFACF0424F14BF400FC7207 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7AFACF0A24F14BF400FC7207 /* Maskit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Maskit.xcdatamodel; sourceTree = "<group>"; };
 		7AFACF0C24F14BFD00FC7207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AFACF0F24F14BFD00FC7207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +78,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A29BF4124F16E41002E2B3E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				7A82F12324F1710200626B3D /* UITools.swift */,
+				7AFACF0024F14BF400FC7207 /* AppDelegate.swift */,
+				7AFACF0224F14BF400FC7207 /* SceneDelegate.swift */,
+				7AFACF0C24F14BFD00FC7207 /* Assets.xcassets */,
+				7AFACF0E24F14BFD00FC7207 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		7A29BF4224F16E88002E2B3E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7AFACF0424F14BF400FC7207 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		7AFACEF424F14BF400FC7207 = {
 			isa = PBXGroup;
 			children = (
@@ -101,12 +121,8 @@
 		7AFACEFF24F14BF400FC7207 /* Maskit */ = {
 			isa = PBXGroup;
 			children = (
-				7AFACF0024F14BF400FC7207 /* AppDelegate.swift */,
-				7AFACF0224F14BF400FC7207 /* SceneDelegate.swift */,
-				7AFACF0424F14BF400FC7207 /* ViewController.swift */,
-				7AFACF0624F14BF400FC7207 /* Main.storyboard */,
-				7AFACF0C24F14BFD00FC7207 /* Assets.xcassets */,
-				7AFACF0E24F14BFD00FC7207 /* LaunchScreen.storyboard */,
+				7A29BF4224F16E88002E2B3E /* Controllers */,
+				7A29BF4124F16E41002E2B3E /* Support */,
 				7AFACF1124F14BFD00FC7207 /* Info.plist */,
 				7AFACF0924F14BF400FC7207 /* Maskit.xcdatamodeld */,
 			);
@@ -194,7 +210,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Adrien Zier";
 				TargetAttributes = {
 					7AFACEFC24F14BF400FC7207 = {
@@ -237,7 +253,6 @@
 			files = (
 				7AFACF1024F14BFD00FC7207 /* LaunchScreen.storyboard in Resources */,
 				7AFACF0D24F14BFD00FC7207 /* Assets.xcassets in Resources */,
-				7AFACF0824F14BF400FC7207 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AFACF0B24F14BF400FC7207 /* Maskit.xcdatamodeld in Sources */,
-				7AFACF0524F14BF400FC7207 /* ViewController.swift in Sources */,
+				7AFACF0524F14BF400FC7207 /* HomeViewController.swift in Sources */,
+				7A82F12424F1710200626B3D /* UITools.swift in Sources */,
 				7AFACF0124F14BF400FC7207 /* AppDelegate.swift in Sources */,
 				7AFACF0324F14BF400FC7207 /* SceneDelegate.swift in Sources */,
 			);
@@ -301,14 +317,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7AFACF0624F14BF400FC7207 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7AFACF0724F14BF400FC7207 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7AFACF0E24F14BFD00FC7207 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -346,6 +354,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -406,6 +415,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -439,6 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GU382C777F;
 				INFOPLIST_FILE = Maskit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,7 +458,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ethical-inc.Maskit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -456,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GU382C777F;
 				INFOPLIST_FILE = Maskit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -464,7 +476,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ethical-inc.Maskit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
