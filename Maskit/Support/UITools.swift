@@ -38,4 +38,6 @@ public class UITools {
     let wasteTitleString = "Waste"
     let usageTitleString = "Usage"
     
+    let infoImage = UIImage(named: "info")?.withRenderingMode(.alwaysTemplate)
+    
 }

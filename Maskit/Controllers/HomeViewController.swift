@@ -222,6 +222,18 @@ class HomeViewController: UIViewController {
             
     }()
     
+    fileprivate let infoButton: UIButton = {
+            
+        let button = UIButton()
+            
+        button.tintColor = UIColor(named: UITools().darkTextColorString)
+        button.alpha = 0.7
+        button.translatesAutoresizingMaskIntoConstraints = false
+            
+        return button
+            
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -237,6 +249,7 @@ class HomeViewController: UIViewController {
         VIEW_HEIGHT = view.frame.height
             
         view.addSubview(headerTitle)
+        view.addSubview(infoButton)
         
         view.addSubview(monateryCardView)
         monateryCardView.addSubview(monateryTitle)
@@ -266,7 +279,10 @@ class HomeViewController: UIViewController {
             
             headerTitle.topAnchor.constraint(equalTo: margins.topAnchor, constant: UITools().PADDING * 2),
             headerTitle.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: UITools().PADDING / 2),
-            headerTitle.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -UITools().PADDING / 2),
+            headerTitle.trailingAnchor.constraint(equalTo: infoButton.leadingAnchor),
+            
+            infoButton.centerYAnchor.constraint(equalTo: headerTitle.centerYAnchor),
+            infoButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -UITools().PADDING / 2),
             
             addBackgroundView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -UITools().PADDING * 2),
             addBackgroundView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
@@ -280,7 +296,7 @@ class HomeViewController: UIViewController {
             
             monateryCardView.topAnchor.constraint(equalTo: headerTitle.bottomAnchor, constant: UITools().PADDING * 2),
             monateryCardView.leadingAnchor.constraint(equalTo: headerTitle.leadingAnchor),
-            monateryCardView.trailingAnchor.constraint(equalTo: headerTitle.trailingAnchor),
+            monateryCardView.trailingAnchor.constraint(equalTo: infoButton.trailingAnchor),
             monateryCardView.bottomAnchor.constraint(equalTo: monateryAvg.bottomAnchor, constant: UITools().PADDING),
             
             monateryTitle.topAnchor.constraint(equalTo: monateryCardView.topAnchor, constant: UITools().PADDING),
@@ -297,7 +313,7 @@ class HomeViewController: UIViewController {
             
             wasteCardView.topAnchor.constraint(equalTo: monateryCardView.bottomAnchor, constant: UITools().PADDING),
             wasteCardView.leadingAnchor.constraint(equalTo: headerTitle.leadingAnchor),
-            wasteCardView.trailingAnchor.constraint(equalTo: headerTitle.trailingAnchor),
+            wasteCardView.trailingAnchor.constraint(equalTo: infoButton.trailingAnchor),
             wasteCardView.bottomAnchor.constraint(equalTo: wasteAvg.bottomAnchor, constant: UITools().PADDING),
             
             wasteTitle.topAnchor.constraint(equalTo: wasteCardView.topAnchor, constant: UITools().PADDING),
@@ -314,7 +330,7 @@ class HomeViewController: UIViewController {
             
             usageCardView.topAnchor.constraint(equalTo: wasteCardView.bottomAnchor, constant: UITools().PADDING),
             usageCardView.leadingAnchor.constraint(equalTo: headerTitle.leadingAnchor),
-            usageCardView.trailingAnchor.constraint(equalTo: headerTitle.trailingAnchor),
+            usageCardView.trailingAnchor.constraint(equalTo: infoButton.trailingAnchor),
             usageCardView.bottomAnchor.constraint(equalTo: usageAvg.bottomAnchor, constant: UITools().PADDING),
             
             usageTitle.topAnchor.constraint(equalTo: usageCardView.topAnchor, constant: UITools().PADDING),
@@ -335,11 +351,21 @@ class HomeViewController: UIViewController {
         
         addButton.addTarget(self, action: #selector(self.add), for: .touchUpInside)
         
+        infoButton.addTarget(self, action: #selector(self.info), for: .touchUpInside)
+        infoButton.setImage(UITools().infoImage, for: .normal)
+        
     }
 
     
     @objc func add(sender : UITapGestureRecognizer) {
         print("boop")
+    }
+    
+    @objc func info(sender : UITapGestureRecognizer) {
+        
+        guard let url = URL(string: "https://www.rdehospital.nhs.uk/documents/patients/wearing-a-face-mask-or-face-covering-during-covid-19-leaflet.pdf") else { return }
+        UIApplication.shared.open(url)
+        
     }
 }
 
