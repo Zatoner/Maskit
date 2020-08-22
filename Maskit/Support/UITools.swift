@@ -13,7 +13,7 @@ public class UITools {
     
     let CELL_SPACING = CGFloat(12)
     let CORNER_RADIUS = CGFloat(16)
-    let PADDING = CGFloat(16)
+    let PADDING = CGFloat(18)
     let ICON_SIZE = CGFloat(28)
     let HEADER_FONT_SIZE = CGFloat(38)
     let CARDHEADER_FONT_SIZE = CGFloat(20)
