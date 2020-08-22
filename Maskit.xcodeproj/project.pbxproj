@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		08B11C9BD6D7A7BA738939AA /* Pods_Maskit_MaskitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1E78441A5EE0A946E5C0F4 /* Pods_Maskit_MaskitUITests.framework */; };
 		15D32C8C5C7C69410029FE19 /* Pods_MaskitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917DB744E140DC452AA8058 /* Pods_MaskitTests.framework */; };
 		7A1B503624F1CD6B00DC3CED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A1B503524F1CD6B00DC3CED /* GoogleService-Info.plist */; };
+		7A1B503824F1D2AA00DC3CED /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B503724F1D2AA00DC3CED /* AddViewController.swift */; };
 		7A82F12424F1710200626B3D /* UITools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82F12324F1710200626B3D /* UITools.swift */; };
 		7AFACF0124F14BF400FC7207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF0024F14BF400FC7207 /* AppDelegate.swift */; };
 		7AFACF0324F14BF400FC7207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF0224F14BF400FC7207 /* SceneDelegate.swift */; };
@@ -44,6 +45,7 @@
 		336A6E426C9FF6A58AB13286 /* Pods-MaskitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaskitTests.release.xcconfig"; path = "Target Support Files/Pods-MaskitTests/Pods-MaskitTests.release.xcconfig"; sourceTree = "<group>"; };
 		340EE84B0D3314B39F993AC9 /* Pods-MaskitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaskitTests.debug.xcconfig"; path = "Target Support Files/Pods-MaskitTests/Pods-MaskitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A1B503524F1CD6B00DC3CED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7A1B503724F1D2AA00DC3CED /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		7A82F12324F1710200626B3D /* UITools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITools.swift; sourceTree = "<group>"; };
 		7AFACEFD24F14BF400FC7207 /* Maskit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maskit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AFACF0024F14BF400FC7207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				7AFACF0424F14BF400FC7207 /* HomeViewController.swift */,
+				7A1B503724F1D2AA00DC3CED /* AddViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,7 +190,6 @@
 				340EE84B0D3314B39F993AC9 /* Pods-MaskitTests.debug.xcconfig */,
 				336A6E426C9FF6A58AB13286 /* Pods-MaskitTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -432,6 +434,7 @@
 			files = (
 				7AFACF0B24F14BF400FC7207 /* Maskit.xcdatamodeld in Sources */,
 				7AFACF0524F14BF400FC7207 /* HomeViewController.swift in Sources */,
+				7A1B503824F1D2AA00DC3CED /* AddViewController.swift in Sources */,
 				7A82F12424F1710200626B3D /* UITools.swift in Sources */,
 				7AFACF0124F14BF400FC7207 /* AppDelegate.swift in Sources */,
 				7AFACF0324F14BF400FC7207 /* SceneDelegate.swift in Sources */,
