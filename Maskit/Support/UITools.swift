@@ -12,10 +12,12 @@ import UIKit
 public class UITools {
     
     let CELL_SPACING = CGFloat(12)
-    let CORNER_RADIUS = CGFloat(12)
+    let CORNER_RADIUS = CGFloat(16)
     let PADDING = CGFloat(16)
     let ICON_SIZE = CGFloat(28)
     let HEADER_FONT_SIZE = CGFloat(38)
+    let CARDHEADER_FONT_SIZE = CGFloat(20)
+    let CARDITEM_FONT_SIZE = CGFloat(58)
     let BUTTON_FONT_SIZE = CGFloat(26)
     let BUTTON_HEIGHT = CGFloat(56)
     
@@ -31,5 +33,9 @@ public class UITools {
     
     let headerTitleString = "My Impact"
     let addButtonString = "Add"
+    
+    let monateryTitleString = "Monatery"
+    let wasteTitleString = "Waste"
+    let usageTitleString = "Usage"
     
 }
