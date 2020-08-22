@@ -244,50 +244,41 @@ class HomeViewController: UIViewController {
         initialise()
         generateUI()
         
-        DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
-            
-            guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else {
-                print("your device is not applicable for video recording")
-                return
-            }
-            
-            let avVideoInput: AVCaptureDeviceInput
-            
-            do {
-                avVideoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
-            } catch {
-                print("your device has no camera")
-                return
-            }
-            
-            if (self.captureSession.canAddInput(avVideoInput)) {
-                
-                self.captureSession.addInput(avVideoInput)
-                
-            } else {
-                print("your device cannot add input in capture session")
-                return
-                
-            }
-            
-            let metadataOutput = AVCaptureMetadataOutput()
-            
-            if (self.captureSession.canAddOutput(metadataOutput)) {
-                self.captureSession.addOutput(metadataOutput)
-                metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-                metadataOutput.metadataObjectTypes = [.ean8, .ean13, .pdf417, .qr]
-            } else {
-                return
-            }
-            
-            self.previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
-            self.previewLayer.frame = self.view.layer.bounds
-            self.previewLayer.videoGravity = .resizeAspectFill
-            self.view.layer.addSublayer(self.previewLayer)
-            self.captureSession.startRunning()
-            
-        })
+    }
+    
+    func openScanner() {
         
+        guard let videoCaptureDevice: AVCaptureDevice = AVCaptureDevice.default(.builtInWideAngleCamera,
+            for: .video, position: .back) else {
+            return
+        }
+        
+        let avVideoInput: AVCaptureDeviceInput
+        
+        do {
+            avVideoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
+        } catch {
+            print("your device has no camera")
+            return
+        }
+        
+        self.captureSession.addInput(avVideoInput)
+        
+        let metadataOutput = AVCaptureMetadataOutput()
+        
+        if (self.captureSession.canAddOutput(metadataOutput)) {
+            self.captureSession.addOutput(metadataOutput)
+            metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+            metadataOutput.metadataObjectTypes = [.ean8, .ean13, .pdf417, .qr]
+        } else {
+            return
+        }
+        
+        self.previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
+        self.previewLayer.frame = self.view.layer.bounds
+        self.previewLayer.videoGravity = .resizeAspectFill
+        self.view.layer.addSublayer(self.previewLayer)
+        self.captureSession.startRunning()
     }
     
     func initialise() {
@@ -332,7 +323,7 @@ class HomeViewController: UIViewController {
             infoButton.centerYAnchor.constraint(equalTo: headerTitle.centerYAnchor),
             infoButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -UITools().PADDING / 2),
             
-            addBackgroundView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -UITools().PADDING * 2),
+            addBackgroundView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -UITools().PADDING * 1.5),
             addBackgroundView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
             addBackgroundView.widthAnchor.constraint(equalToConstant: view.frame.width / 2.5),
             addBackgroundView.heightAnchor.constraint(equalToConstant: UITools().BUTTON_HEIGHT),
@@ -406,7 +397,9 @@ class HomeViewController: UIViewController {
 
     
     @objc func add(sender : UITapGestureRecognizer) {
-        print("boop")
+        
+        openScanner()
+        
     }
     
     @objc func info(sender : UITapGestureRecognizer) {

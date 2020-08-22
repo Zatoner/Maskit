@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08B11C9BD6D7A7BA738939AA /* Pods_Maskit_MaskitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1E78441A5EE0A946E5C0F4 /* Pods_Maskit_MaskitUITests.framework */; };
+		15D32C8C5C7C69410029FE19 /* Pods_MaskitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B917DB744E140DC452AA8058 /* Pods_MaskitTests.framework */; };
+		7A1B503624F1CD6B00DC3CED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A1B503524F1CD6B00DC3CED /* GoogleService-Info.plist */; };
 		7A82F12424F1710200626B3D /* UITools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82F12324F1710200626B3D /* UITools.swift */; };
 		7AFACF0124F14BF400FC7207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF0024F14BF400FC7207 /* AppDelegate.swift */; };
 		7AFACF0324F14BF400FC7207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF0224F14BF400FC7207 /* SceneDelegate.swift */; };
@@ -16,6 +19,7 @@
 		7AFACF1024F14BFD00FC7207 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AFACF0E24F14BFD00FC7207 /* LaunchScreen.storyboard */; };
 		7AFACF1B24F14BFD00FC7207 /* MaskitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF1A24F14BFD00FC7207 /* MaskitTests.swift */; };
 		7AFACF2624F14BFD00FC7207 /* MaskitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF2524F14BFD00FC7207 /* MaskitUITests.swift */; };
+		E42D51BC7A59F138673A62F6 /* Pods_Maskit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141F8E2AF33B84B04DC1BAB7 /* Pods_Maskit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		141F8E2AF33B84B04DC1BAB7 /* Pods_Maskit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Maskit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		336A6E426C9FF6A58AB13286 /* Pods-MaskitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaskitTests.release.xcconfig"; path = "Target Support Files/Pods-MaskitTests/Pods-MaskitTests.release.xcconfig"; sourceTree = "<group>"; };
+		340EE84B0D3314B39F993AC9 /* Pods-MaskitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaskitTests.debug.xcconfig"; path = "Target Support Files/Pods-MaskitTests/Pods-MaskitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A1B503524F1CD6B00DC3CED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7A82F12324F1710200626B3D /* UITools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITools.swift; sourceTree = "<group>"; };
 		7AFACEFD24F14BF400FC7207 /* Maskit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maskit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AFACF0024F14BF400FC7207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +59,12 @@
 		7AFACF2124F14BFD00FC7207 /* MaskitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaskitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AFACF2524F14BFD00FC7207 /* MaskitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskitUITests.swift; sourceTree = "<group>"; };
 		7AFACF2724F14BFD00FC7207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A1E78441A5EE0A946E5C0F4 /* Pods_Maskit_MaskitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Maskit_MaskitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1775C096490AFCAB0C51126 /* Pods-Maskit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maskit.release.xcconfig"; path = "Target Support Files/Pods-Maskit/Pods-Maskit.release.xcconfig"; sourceTree = "<group>"; };
+		B917DB744E140DC452AA8058 /* Pods_MaskitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaskitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1E2300D6BDD807CAECC715F /* Pods-Maskit-MaskitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maskit-MaskitUITests.debug.xcconfig"; path = "Target Support Files/Pods-Maskit-MaskitUITests/Pods-Maskit-MaskitUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DCD862BE8CDC72B6BE737466 /* Pods-Maskit-MaskitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maskit-MaskitUITests.release.xcconfig"; path = "Target Support Files/Pods-Maskit-MaskitUITests/Pods-Maskit-MaskitUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F15CF34A7F18AFA8015558D0 /* Pods-Maskit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maskit.debug.xcconfig"; path = "Target Support Files/Pods-Maskit/Pods-Maskit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42D51BC7A59F138673A62F6 /* Pods_Maskit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D32C8C5C7C69410029FE19 /* Pods_MaskitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08B11C9BD6D7A7BA738939AA /* Pods_Maskit_MaskitUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +122,8 @@
 				7AFACF1924F14BFD00FC7207 /* MaskitTests */,
 				7AFACF2424F14BFD00FC7207 /* MaskitUITests */,
 				7AFACEFE24F14BF400FC7207 /* Products */,
+				D65B1EB1D039B35457021B00 /* Pods */,
+				A3D34B5FFACA5AE32E18F816 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +143,7 @@
 				7A29BF4224F16E88002E2B3E /* Controllers */,
 				7A29BF4124F16E41002E2B3E /* Support */,
 				7AFACF1124F14BFD00FC7207 /* Info.plist */,
+				7A1B503524F1CD6B00DC3CED /* GoogleService-Info.plist */,
 				7AFACF0924F14BF400FC7207 /* Maskit.xcdatamodeld */,
 			);
 			path = Maskit;
@@ -147,6 +167,30 @@
 			path = MaskitUITests;
 			sourceTree = "<group>";
 		};
+		A3D34B5FFACA5AE32E18F816 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				141F8E2AF33B84B04DC1BAB7 /* Pods_Maskit.framework */,
+				8A1E78441A5EE0A946E5C0F4 /* Pods_Maskit_MaskitUITests.framework */,
+				B917DB744E140DC452AA8058 /* Pods_MaskitTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D65B1EB1D039B35457021B00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F15CF34A7F18AFA8015558D0 /* Pods-Maskit.debug.xcconfig */,
+				A1775C096490AFCAB0C51126 /* Pods-Maskit.release.xcconfig */,
+				C1E2300D6BDD807CAECC715F /* Pods-Maskit-MaskitUITests.debug.xcconfig */,
+				DCD862BE8CDC72B6BE737466 /* Pods-Maskit-MaskitUITests.release.xcconfig */,
+				340EE84B0D3314B39F993AC9 /* Pods-MaskitTests.debug.xcconfig */,
+				336A6E426C9FF6A58AB13286 /* Pods-MaskitTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7AFACF2A24F14BFD00FC7207 /* Build configuration list for PBXNativeTarget "Maskit" */;
 			buildPhases = (
+				EAB93166630B566EB5505EF6 /* [CP] Check Pods Manifest.lock */,
 				7AFACEF924F14BF400FC7207 /* Sources */,
 				7AFACEFA24F14BF400FC7207 /* Frameworks */,
 				7AFACEFB24F14BF400FC7207 /* Resources */,
+				500375ED24CC07644CC2109E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,6 +217,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7AFACF2D24F14BFD00FC7207 /* Build configuration list for PBXNativeTarget "MaskitTests" */;
 			buildPhases = (
+				C8935C507952A8B2FFDDBBC1 /* [CP] Check Pods Manifest.lock */,
 				7AFACF1224F14BFD00FC7207 /* Sources */,
 				7AFACF1324F14BFD00FC7207 /* Frameworks */,
 				7AFACF1424F14BFD00FC7207 /* Resources */,
@@ -189,9 +236,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7AFACF3024F14BFD00FC7207 /* Build configuration list for PBXNativeTarget "MaskitUITests" */;
 			buildPhases = (
+				A3978008DA2AEA51E413104C /* [CP] Check Pods Manifest.lock */,
 				7AFACF1D24F14BFD00FC7207 /* Sources */,
 				7AFACF1E24F14BFD00FC7207 /* Frameworks */,
 				7AFACF1F24F14BFD00FC7207 /* Resources */,
+				F1EB31DE7B886FF3734864E5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +302,7 @@
 			files = (
 				7AFACF1024F14BFD00FC7207 /* LaunchScreen.storyboard in Resources */,
 				7AFACF0D24F14BFD00FC7207 /* Assets.xcassets in Resources */,
+				7A1B503624F1CD6B00DC3CED /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +321,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		500375ED24CC07644CC2109E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Maskit/Pods-Maskit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Maskit/Pods-Maskit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Maskit/Pods-Maskit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3978008DA2AEA51E413104C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Maskit-MaskitUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8935C507952A8B2FFDDBBC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MaskitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAB93166630B566EB5505EF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Maskit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1EB31DE7B886FF3734864E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Maskit-MaskitUITests/Pods-Maskit-MaskitUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Maskit-MaskitUITests/Pods-Maskit-MaskitUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Maskit-MaskitUITests/Pods-Maskit-MaskitUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7AFACEF924F14BF400FC7207 /* Sources */ = {
@@ -446,6 +599,7 @@
 		};
 		7AFACF2B24F14BFD00FC7207 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F15CF34A7F18AFA8015558D0 /* Pods-Maskit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +618,7 @@
 		};
 		7AFACF2C24F14BFD00FC7207 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1775C096490AFCAB0C51126 /* Pods-Maskit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -482,6 +637,7 @@
 		};
 		7AFACF2E24F14BFD00FC7207 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 340EE84B0D3314B39F993AC9 /* Pods-MaskitTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -503,6 +659,7 @@
 		};
 		7AFACF2F24F14BFD00FC7207 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 336A6E426C9FF6A58AB13286 /* Pods-MaskitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +681,7 @@
 		};
 		7AFACF3124F14BFD00FC7207 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1E2300D6BDD807CAECC715F /* Pods-Maskit-MaskitUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -543,6 +701,7 @@
 		};
 		7AFACF3224F14BFD00FC7207 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCD862BE8CDC72B6BE737466 /* Pods-Maskit-MaskitUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
