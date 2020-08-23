@@ -40,6 +40,8 @@ public class UITools {
     
     let addTitleString = "Add Masks"
     let maskCellString = "cell"
+    let quantityTitleString = "Quantity"
+    let doneButtonString = "Done"
     
     let infoImage = UIImage(named: "info")?.withRenderingMode(.alwaysTemplate)
     let scanImage = UIImage(named: "round_qr_code_scanner_white_36pt")?.withRenderingMode(.alwaysTemplate)

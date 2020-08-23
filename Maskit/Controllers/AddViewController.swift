@@ -9,8 +9,10 @@
 import UIKit
 import AVFoundation
 
-class AddViewController: UIViewController {
+class AddViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    var dataArray = Array(1...100)
+    
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
@@ -69,6 +71,55 @@ class AddViewController: UIViewController {
             
     }()
     
+    fileprivate let quantityTitle: UILabel = {
+            
+        var label = UILabel()
+            
+        label.font = UIFont.systemFont(ofSize: UITools().CARDHEADER_FONT_SIZE)
+        label.text = UITools().quantityTitleString
+        label.textColor = UIColor(named: UITools().darkTextColorString)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.alpha = 0.5
+            
+        return label
+            
+    }()
+    
+    fileprivate let quantityPicker: UIPickerView = {
+        
+        var picker = UIPickerView()
+        
+        picker.translatesAutoresizingMaskIntoConstraints = false
+        
+        return picker
+        
+    }()
+    
+    fileprivate let doneBackground: UIView = {
+        
+        var view = UIView()
+        
+        view.backgroundColor = .black
+        view.alpha = 0.15
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
+        
+    }()
+    
+    fileprivate let doneButton: UIButton = {
+        
+        let button = UIButton()
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle(UITools().doneButtonString, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: UITools().BUTTON_FONT_SIZE)
+        button.setTitleColor(UIColor(named: UITools().darkTextColorString), for: .normal)
+        
+        return button
+        
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -85,10 +136,19 @@ class AddViewController: UIViewController {
         maskTypeCollectionView.delegate = self
         maskTypeCollectionView.dataSource = self
         
+        quantityPicker.delegate = self as UIPickerViewDelegate
+        quantityPicker.dataSource = self as UIPickerViewDataSource
+        
         view.addSubview(headerBackground)
         headerBackground.addSubview(headerTitle)
         headerBackground.addSubview(maskTypeCollectionView)
         headerBackground.addSubview(scanButton)
+        
+        view.addSubview(quantityTitle)
+        view.addSubview(quantityPicker)
+        
+        view.addSubview(doneBackground)
+        view.addSubview(doneButton)
             
     }
     
@@ -116,9 +176,27 @@ class AddViewController: UIViewController {
             maskTypeCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             maskTypeCollectionView.bottomAnchor.constraint(equalTo: headerBackground.bottomAnchor, constant: -UITools().PADDING),
             
+            quantityTitle.topAnchor.constraint(equalTo: headerBackground.bottomAnchor, constant: UITools().PADDING * 2),
+            quantityTitle.leadingAnchor.constraint(equalTo: headerTitle.leadingAnchor),
+            quantityTitle.trailingAnchor.constraint(equalTo: scanButton.trailingAnchor),
+            
+            quantityPicker.topAnchor.constraint(equalTo: quantityTitle.bottomAnchor),
+            quantityPicker.leadingAnchor.constraint(equalTo: quantityTitle.leadingAnchor),
+            quantityPicker.trailingAnchor.constraint(equalTo: quantityTitle.trailingAnchor),
+            
+            doneBackground.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            doneBackground.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            doneBackground.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            doneBackground.heightAnchor.constraint(equalToConstant: VIEW_HEIGHT / 6),
+            
+            doneButton.centerXAnchor.constraint(equalTo: doneBackground.centerXAnchor),
+            doneButton.topAnchor.constraint(equalTo: doneBackground.topAnchor, constant: UITools().PADDING * 2)
+            
         ]
         
         NSLayoutConstraint.activate(constraints)
+        
+        doneButton.addTarget(self, action: #selector(self.done), for: .touchUpInside)
         
         scanButton.addTarget(self, action: #selector(self.scan), for: .touchUpInside)
         scanButton.setImage(UITools().scanImage, for: .normal)
@@ -128,6 +206,14 @@ class AddViewController: UIViewController {
     @objc func scan(sender : UITapGestureRecognizer) {
         
         //openScanner()
+        
+    }
+    
+    @objc func done(sender : UITapGestureRecognizer) {
+        
+        self.dismiss(animated: true, completion: {
+            self.presentingViewController?.dismiss(animated: true, completion: nil)
+        })
         
     }
     
@@ -165,10 +251,21 @@ class AddViewController: UIViewController {
         self.view.layer.addSublayer(self.previewLayer)
         self.captureSession.startRunning()
     }
-
-}
-
-extension AddViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+       return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+       return dataArray.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+       let row = String(dataArray[row])
+        
+       return row
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width/2, height: collectionView.frame.height)
@@ -183,6 +280,7 @@ extension AddViewController: UICollectionViewDelegateFlowLayout, UICollectionVie
         //cell.data = self.data[indexPath.item]
         return cell
     }
+
 }
 
 extension HomeViewController : AVCaptureMetadataOutputObjectsDelegate {
