@@ -38,6 +38,10 @@ public class UITools {
     let wasteTitleString = "Waste"
     let usageTitleString = "Usage"
     
+    let addTitleString = "Add Masks"
+    let maskCellString = "cell"
+    
     let infoImage = UIImage(named: "info")?.withRenderingMode(.alwaysTemplate)
+    let scanImage = UIImage(named: "round_qr_code_scanner_white_36pt")?.withRenderingMode(.alwaysTemplate)
     
 }

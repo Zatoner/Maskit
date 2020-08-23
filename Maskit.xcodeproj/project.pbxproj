@@ -12,6 +12,7 @@
 		7A1B503624F1CD6B00DC3CED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A1B503524F1CD6B00DC3CED /* GoogleService-Info.plist */; };
 		7A1B503824F1D2AA00DC3CED /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B503724F1D2AA00DC3CED /* AddViewController.swift */; };
 		7A82F12424F1710200626B3D /* UITools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82F12324F1710200626B3D /* UITools.swift */; };
+		7ABA1F8124F27A9E00EB1EE5 /* maskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABA1F8024F27A9E00EB1EE5 /* maskCollectionViewCell.swift */; };
 		7AFACF0124F14BF400FC7207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF0024F14BF400FC7207 /* AppDelegate.swift */; };
 		7AFACF0324F14BF400FC7207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF0224F14BF400FC7207 /* SceneDelegate.swift */; };
 		7AFACF0524F14BF400FC7207 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFACF0424F14BF400FC7207 /* HomeViewController.swift */; };
@@ -47,6 +48,7 @@
 		7A1B503524F1CD6B00DC3CED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7A1B503724F1D2AA00DC3CED /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		7A82F12324F1710200626B3D /* UITools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITools.swift; sourceTree = "<group>"; };
+		7ABA1F8024F27A9E00EB1EE5 /* maskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maskCollectionViewCell.swift; sourceTree = "<group>"; };
 		7AFACEFD24F14BF400FC7207 /* Maskit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maskit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AFACF0024F14BF400FC7207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AFACF0224F14BF400FC7207 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		7ABA1F7F24F27A8900EB1EE5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7ABA1F8024F27A9E00EB1EE5 /* maskCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		7AFACEF424F14BF400FC7207 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				7A29BF4224F16E88002E2B3E /* Controllers */,
+				7ABA1F7F24F27A8900EB1EE5 /* Cells */,
 				7A29BF4124F16E41002E2B3E /* Support */,
 				7AFACF1124F14BFD00FC7207 /* Info.plist */,
 				7A1B503524F1CD6B00DC3CED /* GoogleService-Info.plist */,
@@ -435,6 +446,7 @@
 				7AFACF0B24F14BF400FC7207 /* Maskit.xcdatamodeld in Sources */,
 				7AFACF0524F14BF400FC7207 /* HomeViewController.swift in Sources */,
 				7A1B503824F1D2AA00DC3CED /* AddViewController.swift in Sources */,
+				7ABA1F8124F27A9E00EB1EE5 /* maskCollectionViewCell.swift in Sources */,
 				7A82F12424F1710200626B3D /* UITools.swift in Sources */,
 				7AFACF0124F14BF400FC7207 /* AppDelegate.swift in Sources */,
 				7AFACF0324F14BF400FC7207 /* SceneDelegate.swift in Sources */,

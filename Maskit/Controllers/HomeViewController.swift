@@ -7,15 +7,11 @@
 //
 
 import UIKit
-import AVFoundation
 
 class HomeViewController: UIViewController {
 
     var VIEW_HEIGHT = CGFloat()
     var margins = UILayoutGuide()
-    
-    var captureSession: AVCaptureSession!
-    var previewLayer: AVCaptureVideoPreviewLayer!
     
     fileprivate let headerTitle: UILabel = {
             
@@ -246,41 +242,6 @@ class HomeViewController: UIViewController {
         
     }
     
-    func openScanner() {
-        
-        guard let videoCaptureDevice: AVCaptureDevice = AVCaptureDevice.default(.builtInWideAngleCamera,
-            for: .video, position: .back) else {
-            return
-        }
-        
-        let avVideoInput: AVCaptureDeviceInput
-        
-        do {
-            avVideoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
-        } catch {
-            print("your device has no camera")
-            return
-        }
-        
-        self.captureSession.addInput(avVideoInput)
-        
-        let metadataOutput = AVCaptureMetadataOutput()
-        
-        if (self.captureSession.canAddOutput(metadataOutput)) {
-            self.captureSession.addOutput(metadataOutput)
-            metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-            metadataOutput.metadataObjectTypes = [.ean8, .ean13, .pdf417, .qr]
-        } else {
-            return
-        }
-        
-        self.previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
-        self.previewLayer.frame = self.view.layer.bounds
-        self.previewLayer.videoGravity = .resizeAspectFill
-        self.view.layer.addSublayer(self.previewLayer)
-        self.captureSession.startRunning()
-    }
-    
     func initialise() {
             
         margins = view.layoutMarginsGuide
@@ -398,6 +359,12 @@ class HomeViewController: UIViewController {
     
     @objc func add(sender : UITapGestureRecognizer) {
         
+        let newViewController = AddViewController()
+        newViewController.modalPresentationStyle = .automatic
+        present(newViewController, animated: true) {
+            print("done")
+        }
+        
         //openScanner()
         
     }
@@ -407,26 +374,6 @@ class HomeViewController: UIViewController {
         guard let url = URL(string: "https://www.rdehospital.nhs.uk/documents/patients/wearing-a-face-mask-or-face-covering-during-covid-19-leaflet.pdf") else { return }
         UIApplication.shared.open(url)
         
-    }
-}
-
-extension HomeViewController : AVCaptureMetadataOutputObjectsDelegate {
-    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        if let first = metadataObjects.first{
-            guard let readableObject = first as? AVMetadataMachineReadableCodeObject else {
-                return
-            }
-            guard let stringValue = readableObject.stringValue else {
-                return
-            }
-            found(code: stringValue)
-        }
-        else {
-            print("Not able to read the code! Please try again.")
-        }
-    }
-    func found(code: String){
-        print(code)
     }
 }
 
