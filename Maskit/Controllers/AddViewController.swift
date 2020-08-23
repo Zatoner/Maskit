@@ -33,6 +33,9 @@ class AddViewController: UIViewController, UICollectionViewDelegateFlowLayout, U
     
     var masksList = [masks]()
     var selectedMask: masks!
+    var selectedQuantity = 0
+    
+    var data: [NSManagedObject] = []
     
     fileprivate let headerTitle: UILabel = {
             
@@ -185,8 +188,9 @@ class AddViewController: UIViewController, UICollectionViewDelegateFlowLayout, U
                     let type = document.documentID
                     let desc = doc["description"] ?? "No Description"
                     let avgPrice = doc["averageprice"] ?? 0
+                    let weight = doc["weight"] ?? 10
                     
-                    let maskItem = masks(type: type, desc: desc as? String, avgPrice: avgPrice as? Float, weight: 10, selected: false)
+                    let maskItem = masks(type: type, desc: desc as? String, avgPrice: avgPrice as? Float, weight: weight as? Float, selected: false)
                     
                     self.masksList.append(maskItem)
                     self.maskTypeCollectionView.reloadData()
@@ -258,11 +262,37 @@ class AddViewController: UIViewController, UICollectionViewDelegateFlowLayout, U
     
     @objc func done(sender : UITapGestureRecognizer) {
         
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+            return
+          }
         
+          let managedContext =
+            appDelegate.persistentContainer.viewContext
+          
+          let entity =
+            NSEntityDescription.entity(forEntityName: "UserData",
+                                       in: managedContext)!
+          
+          let data = NSManagedObject(entity: entity,
+                                       insertInto: managedContext)
+          
+        let currentVal = data.value(forKeyPath: "monatery")
+        data.setValue(currentVal as! Float + (selectedMask.avgPrice ?? 1.5 * Float(selectedQuantity)), forKeyPath: "monatery")
         
-        self.dismiss(animated: true, completion: {
-            self.presentingViewController?.dismiss(animated: true, completion: nil)
-        })
+        let currentWaste = data.value(forKeyPath: "waste")
+        data.setValue(currentWaste as! Float + (selectedMask.weight ?? 10 * Float(selectedQuantity)), forKeyPath: "waste")
+          
+        do {
+            try managedContext.save()
+            
+            self.dismiss(animated: true, completion: {
+                self.presentingViewController?.dismiss(animated: true, completion: nil)
+            })
+            
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+          }
         
     }
     
@@ -314,6 +344,10 @@ class AddViewController: UIViewController, UICollectionViewDelegateFlowLayout, U
        let row = String(dataArray[row])
         
        return row
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedQuantity = dataArray[row]
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

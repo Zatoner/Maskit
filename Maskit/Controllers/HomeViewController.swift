@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeViewController: UIViewController {
 
@@ -367,6 +368,23 @@ class HomeViewController: UIViewController {
         
         //openScanner()
         
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+            return
+          }
+        
+          let managedContext =
+            appDelegate.persistentContainer.viewContext
+          
+          let entity =
+            NSEntityDescription.entity(forEntityName: "UserData",
+                                       in: managedContext)!
+          
+          let data = NSManagedObject(entity: entity,
+                                       insertInto: managedContext)
+          
+        let currentVal = data.value(forKeyPath: "waste")
+        print(currentVal)
     }
     
     @objc func info(sender : UITapGestureRecognizer) {
