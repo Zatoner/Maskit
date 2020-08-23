@@ -398,7 +398,7 @@ class HomeViewController: UIViewController {
     
     @objc func add(sender : UITapGestureRecognizer) {
         
-        openScanner()
+        //openScanner()
         
     }
     
