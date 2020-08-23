@@ -66,11 +66,18 @@ class maskCollectionViewCell: UICollectionViewCell {
     }()
 
     
-//    var eventItem: eventItem! {
-//        didSet {
-//            //set stuff
-//        }
-//    }
+    var maskItem: masks! {
+        didSet {
+            maskName.text = maskItem.type
+            maskDesc.text = maskItem.desc
+            
+            if maskItem.selected {
+                checkMark.alpha = 1
+            } else {
+                checkMark.alpha = 0
+            }
+        }
+    }
 
     override init(frame: CGRect) {
         super.init(frame: .zero)

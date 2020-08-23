@@ -374,6 +374,25 @@ class HomeViewController: UIViewController {
         guard let url = URL(string: "https://www.rdehospital.nhs.uk/documents/patients/wearing-a-face-mask-or-face-covering-during-covid-19-leaflet.pdf") else { return }
         UIApplication.shared.open(url)
         
+        // stoopid notifications :((
+        
+        let center = UNUserNotificationCenter.current()
+
+        let content = UNMutableNotificationContent()
+
+        // Add the content to the notification content
+        content.title = "Mask Usage"
+        content.body = "Mask usage surpassed 4 hours, please renew your mask"
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5,
+                                                        repeats: false)
+
+
+        // Create request
+        let uniqueID = UUID().uuidString // Keep a record of this if necessary
+        let request = UNNotificationRequest(identifier: uniqueID, content: content, trigger: trigger)
+        center.add(request) // Add the notification request
+        
     }
 }
 

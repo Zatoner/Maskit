@@ -8,6 +8,18 @@
 
 import UIKit
 import AVFoundation
+import Firebase
+import FirebaseFirestore
+import CoreData
+
+struct masks {
+    let type: String!
+    let desc: String!
+    let avgPrice: Float!
+    let weight: Float!
+    var selected: Bool!
+    
+}
 
 class AddViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -18,6 +30,9 @@ class AddViewController: UIViewController, UICollectionViewDelegateFlowLayout, U
     
     var VIEW_HEIGHT = CGFloat()
     var margins = UILayoutGuide()
+    
+    var masksList = [masks]()
+    var selectedMask: masks!
     
     fileprivate let headerTitle: UILabel = {
             
@@ -125,6 +140,8 @@ class AddViewController: UIViewController, UICollectionViewDelegateFlowLayout, U
 
         initialise()
         generateUI()
+        
+        getData()
     }
     
     func initialise() {
@@ -150,6 +167,36 @@ class AddViewController: UIViewController, UICollectionViewDelegateFlowLayout, U
         view.addSubview(doneBackground)
         view.addSubview(doneButton)
             
+    }
+    
+    func getData() {
+        
+        let db = Firestore.firestore()
+        
+        let requestRef = db.collection("MasksTypes")
+        
+        requestRef.getDocuments { (snapshot, err) in
+            
+            if err == nil {
+                
+                for document in snapshot!.documents {
+                    
+                    let doc = document.data()
+                    let type = document.documentID
+                    let desc = doc["description"] ?? "No Description"
+                    let avgPrice = doc["averageprice"] ?? 0
+                    
+                    let maskItem = masks(type: type, desc: desc as? String, avgPrice: avgPrice as? Float, weight: 10, selected: false)
+                    
+                    self.masksList.append(maskItem)
+                    self.maskTypeCollectionView.reloadData()
+                    
+                }
+                
+            }
+            
+        }
+        
     }
     
     func generateUI() {
@@ -210,6 +257,8 @@ class AddViewController: UIViewController, UICollectionViewDelegateFlowLayout, U
     }
     
     @objc func done(sender : UITapGestureRecognizer) {
+        
+        
         
         self.dismiss(animated: true, completion: {
             self.presentingViewController?.dismiss(animated: true, completion: nil)
@@ -272,13 +321,26 @@ class AddViewController: UIViewController, UICollectionViewDelegateFlowLayout, U
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return masksList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UITools().maskCellString, for: indexPath) as! maskCollectionViewCell
-        //cell.data = self.data[indexPath.item]
+        cell.maskItem = masksList[indexPath.row]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        for i in 0...(masksList.count - 1) {
+            masksList[i].selected = false
+        }
+        
+        masksList[indexPath.row].selected = true
+        selectedMask = masksList[indexPath.row]
+        
+        collectionView.reloadData()
+        
     }
 
 }
