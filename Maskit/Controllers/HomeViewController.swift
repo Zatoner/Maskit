@@ -87,7 +87,7 @@ class HomeViewController: UIViewController {
         var label = UILabel()
             
         label.font = UIFont.boldSystemFont(ofSize: UITools().CARDITEM_FONT_SIZE)
-        label.text = "£00,00"
+        label.text = "£21,30"
         label.textColor = UIColor(named: UITools().darkTextColorString)
         label.translatesAutoresizingMaskIntoConstraints = false
             
@@ -100,7 +100,7 @@ class HomeViewController: UIViewController {
         var label = UILabel()
             
         label.font = UIFont.systemFont(ofSize: UITools().CARDHEADER_FONT_SIZE)
-        label.text = "Avg: ~£0,00"
+        label.text = "Avg: ~£1,30"
         label.textColor = UIColor(named: UITools().darkTextColorString)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.alpha = 0.5
@@ -144,7 +144,7 @@ class HomeViewController: UIViewController {
         var label = UILabel()
             
         label.font = UIFont.boldSystemFont(ofSize: UITools().CARDITEM_FONT_SIZE)
-        label.text = "000 g"
+        label.text = "324 g"
         label.textColor = UIColor(named: UITools().darkTextColorString)
         label.translatesAutoresizingMaskIntoConstraints = false
             
@@ -157,7 +157,7 @@ class HomeViewController: UIViewController {
         var label = UILabel()
             
         label.font = UIFont.systemFont(ofSize: UITools().CARDHEADER_FONT_SIZE)
-        label.text = "Avg: ~0,00 g"
+        label.text = "Avg: ~1,20 g"
         label.textColor = UIColor(named: UITools().darkTextColorString)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.alpha = 0.5
@@ -200,7 +200,7 @@ class HomeViewController: UIViewController {
         var label = UILabel()
             
         label.font = UIFont.boldSystemFont(ofSize: UITools().CARDITEM_FONT_SIZE)
-        label.text = "00 Hours"
+        label.text = "18 Hours"
         label.textColor = UIColor(named: UITools().darkTextColorString)
         label.translatesAutoresizingMaskIntoConstraints = false
             
@@ -213,7 +213,7 @@ class HomeViewController: UIViewController {
         var label = UILabel()
             
         label.font = UIFont.systemFont(ofSize: UITools().CARDHEADER_FONT_SIZE)
-        label.text = "Avg: ~0h"
+        label.text = "Avg: ~1h"
         label.textColor = UIColor(named: UITools().darkTextColorString)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.alpha = 0.5

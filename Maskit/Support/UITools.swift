@@ -11,7 +11,7 @@ import UIKit
 
 public class UITools {
     
-    let CELL_SPACING = CGFloat(12)
+    let CELL_SPACING = CGFloat(10)
     let CORNER_RADIUS = CGFloat(16)
     let PADDING = CGFloat(18)
     let ICON_SIZE = CGFloat(28)
@@ -19,6 +19,8 @@ public class UITools {
     let CARDHEADER_FONT_SIZE = CGFloat(20)
     let CARDITEM_FONT_SIZE = CGFloat(58)
     let BUTTON_FONT_SIZE = CGFloat(26)
+    let TYPE_FONT_SIZE = CGFloat(18)
+    let DESC_FONT_SIZE = CGFloat(14)
     let BUTTON_HEIGHT = CGFloat(56)
     
     let sOffset = 2
@@ -45,5 +47,6 @@ public class UITools {
     
     let infoImage = UIImage(named: "info")?.withRenderingMode(.alwaysTemplate)
     let scanImage = UIImage(named: "round_qr_code_scanner_white_36pt")?.withRenderingMode(.alwaysTemplate)
+    let checkImage = UIImage(named: "round_check_circle_outline_black_24pt")?.withRenderingMode(.alwaysTemplate)
     
 }
